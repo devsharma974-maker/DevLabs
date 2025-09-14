@@ -1,0 +1,105 @@
+.header-area.homepage1 .header-elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transition: all 0.4s;
+    padding: 20px;
+}
+
+.header-area.homepage1 .header-elements .site-logo img {
+    width: 147px;
+    height: 40px;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.site-logo img {
+    filter: brightness(0);
+}
+
+.header-area.homepage1 .header-elements .btn-area {
+    display: flex;
+    align-items: center;
+}
+
+.header-area.homepage1 .header-elements .btn-area button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.hamburger_menu img {
+    filter: brightness(0);
+}
+
+.hamburger_menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -386px;
+    width: 386px;
+    height: 100%;
+    background-color: #061D1E;
+    color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s ease;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.nav-menu.open {
+    right: 0;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu ul li {
+    margin: 20px 0;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    padding-left: 34px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.SidbarLogo {
+    width: 147px;
+    width: 254px;
+    margin-left: 15px;
+    margin-top: 33px;
+}
