@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# DevLabs
+This is my personal portfolio website built with HTML, CSS, JavaScript, and React. It highlights my skills in UI/UX design, frontend development, and creative web solutions. The site is fully responsive and designed to provide a smooth user experience across devices.
+>>>>>>> d727cfb637546243e2950b0c54068af92490ec61
