@@ -3,9 +3,20 @@ import skil1 from "../Assets/skills/skill1.svg";
 import skil2 from "../Assets/skills/skill2.svg";
 import skil3 from "../Assets/skills/skill3.svg";
 import skil4 from "../Assets/skills/skil4.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const MySkill = () => {
   const [percentage, setPercentage] = useState(0);
+ useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,   // allow multiple times
+      mirror: true,  // 👈 animate out on scroll up
+    });
 
+    // refresh AOS after load
+    AOS.refresh();
+  }, []);
   useEffect(() => {
     const interval = setInterval(() => {
       setPercentage((prev) => {
@@ -26,6 +37,7 @@ const MySkill = () => {
             fontSize: "0.875rem",
             letterSpacing: "0.1em",
           }}
+           data-aos="fade-left" data-aos-delay="300" data-aos-offset="200" data-aos-duration="1500"
         >
           My Skills
         </p>
@@ -35,6 +47,7 @@ const MySkill = () => {
             color: "#000000",
             fontSize: "clamp(2rem, 4.5vw, 5rem)",
           }}
+           data-aos="fade-left" data-aos-delay="400" data-aos-offset="300" data-aos-duration="1700"
         >
           Elevating Brands
           <br />
@@ -45,12 +58,16 @@ const MySkill = () => {
 
       <div className="row g-3">
         {[
-          { skill: skil1, percentage: 80, name: "Figma" },
-          { skill: skil2, percentage: 70, name: "Photoshop" },
-          { skill: skil3, percentage: 90, name: "Illustrator" },
-          { skill: skil4, percentage: 90, name: "CoralDraw" },
+          { skill: skil1, percentage: 80, name: "Figma", dataAos: "zoom-in" },
+          { skill: skil2, percentage: 70, name: "Photoshop", dataAos: "zoom-in" },
+          { skill: skil3, percentage: 90, name: "Illustrator", dataAos: "zoom-in" },
+          { skill: skil4, percentage: 90, name: "CoralDraw", dataAos: "zoom-in" },
         ].map((item, index) => (
-          <div className="col-12 col-md-4" key={index}>
+          <div
+            className="col-12 col-md-4"
+            key={index}
+            {...(item.dataAos ? { 'data-aos': item.dataAos } : {})}
+          >
             <div className="service-card rounded-4 p-4 h-100 text-center">
               <img
                 src={item.skill}

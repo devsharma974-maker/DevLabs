@@ -1,6 +1,17 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Services = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false, // allow multiple times
+      mirror: true, // 👈 animate out on scroll up
+    });
+
+    // refresh AOS after load
+    AOS.refresh();
+  }, []);
   return (
     <>
       <div id="services">
@@ -11,6 +22,10 @@ const Services = () => {
             fontSize: "0.875rem",
             letterSpacing: "0.1em",
           }}
+          data-aos="fade-left"
+          data-aos-delay="300"
+          data-aos-offset="200"
+          data-aos-duration="1500"
         >
           My Services
         </p>
@@ -20,6 +35,10 @@ const Services = () => {
             color: "#000000",
             fontSize: "clamp(2rem, 4.5vw, 5rem)",
           }}
+          data-aos="fade-left"
+          data-aos-delay="400"
+          data-aos-offset="100"
+          data-aos-duration="1700"
         >
           Elevating Brands
           <br />
@@ -29,7 +48,13 @@ const Services = () => {
       </div>
 
       <div className="row g-3">
-        <div className="col-12">
+        <div
+          className="col-12"
+          data-aos="fade-left"
+          data-aos-delay="400"
+          data-aos-offset="100"
+          data-aos-duration="1700"
+        >
           <div className="service-card rounded-4 p-4 h-100">
             <h2 className="fw-bold mb-3 text-dark">UX/UI Design</h2>
             <p>
@@ -39,7 +64,13 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="col-12">
+        <div
+          className="col-12"
+          data-aos="fade-left"
+          data-aos-delay="400"
+          data-aos-offset="100"
+          data-aos-duration="1700"
+        >
           <div className="service-card rounded-4 p-4 h-100">
             <h2 className="fw-bold mb-3 text-dark">
               User Research & Prototyping
@@ -51,7 +82,13 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="col-12">
+        <div
+          className="col-12"
+          data-aos="fade-left"
+          data-aos-delay="400"
+          data-aos-offset="100"
+          data-aos-duration="1700"
+        >
           <div className="service-card rounded-4 p-4 h-100">
             <h2 className="fw-bold mb-3 text-dark">Responsive Web Design</h2>
             <p>
@@ -61,7 +98,13 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="col-12">
+        <div
+          className="col-12"
+          data-aos="fade-left"
+          data-aos-delay="400"
+          data-aos-offset="100"
+          data-aos-duration="1700"
+        >
           <div className="service-card rounded-4 p-4 h-100">
             <h2 className="fw-bold mb-3 text-dark">Usability Testing</h2>
             <p>

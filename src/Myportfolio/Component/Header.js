@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/nvbar.css";
 import "../css/style.css";
 import logo from "../Assets/logo1.png";
-import memueicon from "../Assets/menue_icon.svg";
 import Navbar from "./Navbar";
 
 const Header = () => {
@@ -10,8 +9,9 @@ const Header = () => {
     <>
       <header>
         <div
-          className="header-area homepage1 header header-sticky "
+          className="header-area homepage1 header position-fixed w-100 bg-white"
           id="header"
+          style={{ zIndex: 9999, boxShadow: "0 2px 4px rgba(0,0,0,0.1)" }}
         >
           <div className="container">
             <div className="row">

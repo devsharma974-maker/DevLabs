@@ -1,7 +1,18 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const AboutUs = () => {
   const currentYear = new Date().getFullYear();
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false, // allow multiple times
+      mirror: true, // 👈 animate out on scroll up
+    });
+
+    // refresh AOS after load
+    AOS.refresh();
+  }, []);
   return (
     <>
       <div id="about">
@@ -12,6 +23,10 @@ const AboutUs = () => {
             fontSize: "0.875rem",
             letterSpacing: "0.1em",
           }}
+          data-aos="fade-left"
+          data-aos-delay="300"
+          data-aos-offset="200"
+          data-aos-duration="1500"
         >
           ABOUT US
         </p>
@@ -21,13 +36,23 @@ const AboutUs = () => {
             color: "#000000",
             fontSize: "clamp(2rem, 4.5vw, 5rem)",
           }}
+          data-aos="fade-left"
+          data-aos-delay="400"
+          data-aos-offset="300"
+          data-aos-duration="1700"
         >
           Crafting Seamless <br />
           &nbsp;&nbsp;&nbsp; User{" "}
           <span className="orangeColor">Experiences</span>
         </h2>
       </div>
-      <div className="rounded-4 p-4 service-card">
+      <div
+        className="rounded-4 p-4 service-card"
+        data-aos="fade-left"
+        data-aos-delay="300"
+        data-aos-offset="200"
+        data-aos-duration="1500"
+      >
         <h2
           className="display-6 mb-3 fw-bold mb-0"
           style={{ color: "#000000" }}
@@ -44,7 +69,7 @@ const AboutUs = () => {
       </div>
 
       <div className="row g-3">
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-md-6"  data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" data-aos-duration="1500">
           <div className="service-card rounded-4 p-4 h-100">
             <h5 className="fw-bold mb-3 text-dark">UX/UI Design</h5>
             <p>
@@ -54,7 +79,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-md-6" data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" data-aos-duration="1500">
           <div className="service-card rounded-4 p-4 h-100">
             <h5 className="fw-bold mb-3 text-dark">
               User Research & Prototyping
@@ -66,7 +91,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-md-6" data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" data-aos-duration="1500">
           <div className="service-card rounded-4 p-4 h-100">
             <h5 className="fw-bold mb-3 text-dark">Responsive Web Design</h5>
             <p>
@@ -76,7 +101,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-md-6" data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" data-aos-duration="1500">
           <div className="service-card rounded-4 p-4 h-100">
             <h5 className="fw-bold mb-3 text-dark">Usability Testing</h5>
             <p>
@@ -90,7 +115,7 @@ const AboutUs = () => {
       <div className="row g-3">
         <div className="col-12 col-md-6">
           <h2 className="mb-4">Work Experience</h2>
-          <div className="service-card rounded-4 p-4 ">
+          <div className="service-card rounded-4 p-4 " data-aos="zoom-in" data-aos-delay="300" data-aos-offset="200" data-aos-duration="1500">
             <div>
               <p>2017-{currentYear}</p>
               <h5 className="fw-bold mb-3 text-dark">UX/UI Designer</h5>
@@ -98,7 +123,7 @@ const AboutUs = () => {
               <p>Jodhpur, Rajasthan</p>
             </div>
             <div>
-              <p>2015-2020</p>
+              <p>2015-2016</p>
               <h5 className="fw-bold mb-3 text-dark">UX/UI Designer</h5>
               <p>Noval It Solutions</p>
               <p>Mohali, Punjab</p>
@@ -107,7 +132,7 @@ const AboutUs = () => {
         </div>
         <div className="col-12 col-md-6">
           <h2 className="mb-4">Education</h2>
-          <div className="service-card rounded-4 p-4 ">
+          <div className="service-card rounded-4 p-4 " data-aos="zoom-in" data-aos-delay="300" data-aos-offset="200" data-aos-duration="1500">
             <div>
               <p>2010-2013</p>
               <h5 className="fw-bold mb-3 text-dark">
