@@ -131,21 +131,6 @@ const MySkill = () => {
                   </div>
                 </div>
               </li>
-              <li className="mb-3">
-                <h4 className="fw-bold mb-3 text-dark">JavaScript</h4>
-                <div className="progress">
-                  <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: "75%" }}
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    75%
-                  </div>
-                </div>
-              </li>
             </ul>
           </div>
         </div>
