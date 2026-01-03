@@ -37,6 +37,32 @@
     background-color: rgba(6, 29, 30, 0.05);
 }
 
+/* Hover sliding background for the "Let's Work Together" card */
+.lets_work {
+    position: relative;
+    overflow: hidden;
+}
+.lets_work::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10%;
+    height: 100%;
+    width: 10%;
+    background: linear-gradient(90deg, rgba(255,174,0,0.12), rgba(255,174,0,0.18));
+    transition: all 0.45s ease;
+    border-radius: 12px;
+    z-index: 0;
+}
+.lets_work:hover::after {
+    left: 0;
+    width: 100%;
+}
+.lets_work > * {
+    position: relative;
+    z-index: 1;
+}
+
 .Social_icon {
     background-color: #d9d9d9;
     color: #000;
