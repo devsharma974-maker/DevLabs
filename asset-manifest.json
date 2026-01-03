@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/DevLabs/static/css/main.d2eef603.css",
+    "main.css": "/DevLabs/static/css/main.268c61ec.css",
     "main.js": "/DevLabs/static/js/main.736db621.js",
     "static/media/Resume.pdf": "/DevLabs/static/media/Resume.2e8ae730fa9d18958761.pdf",
     "static/media/about-us.jpeg": "/DevLabs/static/media/about-us.485286d81ef63a585a55.jpeg",
@@ -10,11 +10,11 @@
     "static/media/skill1.svg": "/DevLabs/static/media/skill1.5dd20fc678d2fb24e359a03b3209a887.svg",
     "index.html": "/DevLabs/index.html",
     "static/media/menue_icon.svg": "/DevLabs/static/media/menue_icon.9ee59562bab12a470a3afafdf0873f46.svg",
-    "main.d2eef603.css.map": "/DevLabs/static/css/main.d2eef603.css.map",
+    "main.268c61ec.css.map": "/DevLabs/static/css/main.268c61ec.css.map",
     "main.736db621.js.map": "/DevLabs/static/js/main.736db621.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2eef603.css",
+    "static/css/main.268c61ec.css",
     "static/js/main.736db621.js"
   ]
 }
