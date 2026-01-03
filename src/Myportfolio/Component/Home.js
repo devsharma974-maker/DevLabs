@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Header from "./Header.js";
 import myimage from "../Assets/about-us.jpeg";
+import resumePDF from "../Assets/resume/Resume.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faLinkedinIn, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faDownload, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
@@ -79,36 +80,52 @@ const Home = () => {
 
                   {/* Social Icons */}
                   <div className="d-flex justify-content-center gap-3 mb-3">
-                    <div
-                      className="Social_icon d-flex align-items-center justify-content-center border border-2 border-dark rounded-circle"
-                      style={{ width: "48px", height: "48px" }}
-                    >
-                      <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
-                    </div>
-                    <div
-                      className="Social_icon d-flex align-items-center justify-content-center border border-2 border-dark rounded-circle"
-                      style={{ width: "48px", height: "48px" }}
-                    >
-                      <FontAwesomeIcon icon={faLinkedinIn} />
-                    </div>
-                    <div
+                    <a
+                      href="https://www.instagram.com/devendras971/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram"
                       className="Social_icon d-flex align-items-center justify-content-center border border-2 border-dark rounded-circle"
                       style={{ width: "48px", height: "48px" }}
                     >
                       <FontAwesomeIcon icon={faInstagram} />
-                    </div>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/devendra-sharma-765838109/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                      className="Social_icon d-flex align-items-center justify-content-center border border-2 border-dark rounded-circle"
+                      style={{ width: "48px", height: "48px" }}
+                    >
+                      <FontAwesomeIcon icon={faLinkedinIn} />
+                    </a>
+                    <a
+                      href="#"
+                      aria-label="Facebook"
+                      className="Social_icon d-flex align-items-center justify-content-center border border-2 border-dark rounded-circle"
+                      style={{ width: "48px", height: "48px" }}
+                    >
+                      <FontAwesomeIcon icon={faFacebook} />
+                    </a>
                   </div>
 
                   {/* Download Button */}
-                  <button
+                  <a
+                    href={resumePDF}
+                    download
                     className="btn w-100 fw-semibold fs-5 py-3 rounded-pill OrangeBg DownloadButon"
                     style={{
                       color: "#000000",
+                      textDecoration: "none",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }}
                   >
                     Download Now &nbsp;
-                    <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon>
-                  </button>
+                    <FontAwesomeIcon icon={faDownload} />
+                  </a>
                   <p className="text-center mt-3 mb-0">
                     © {currentYear} DevLabs All Rights Reserved.
                   </p>
