@@ -100,14 +100,14 @@ const Home = () => {
                     >
                       <FontAwesomeIcon icon={faLinkedinIn} />
                     </a>
-                    <a
+                    {/* <a
                       href="#"
                       aria-label="Facebook"
                       className="Social_icon d-flex align-items-center justify-content-center border border-2 border-dark rounded-circle"
                       style={{ width: "48px", height: "48px" }}
                     >
                       <FontAwesomeIcon icon={faFacebook} />
-                    </a>
+                    </a> */}
                   </div>
 
                   {/* Download Button */}
