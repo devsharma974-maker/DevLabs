@@ -14,7 +14,10 @@ const Navbar = () => {
     e.preventDefault();
     const el = document.getElementById(id);
     if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      const header = document.getElementById("header");
+      const headerHeight = header ? header.offsetHeight : 90;
+      const y = window.pageYOffset + el.getBoundingClientRect().top - headerHeight - 8;
+      window.scrollTo({ top: y, behavior: "smooth" });
       setIsOpen(false);
     } else {
       // If the element isn't on the current page (for example when
