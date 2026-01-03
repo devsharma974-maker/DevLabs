@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+// FIX: Add the file extension (.js or .jsx, depending on your App file name)
+import App from './App.js'; 
+// Add extension so ESM resolution finds the file
+import * as serviceWorker from './serviceWorker.js';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -1,19 +1,19 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Myportfolio/Component/Home";
+import { HashRouter , Route, Routes } from "react-router-dom";
+import Home from "./Myportfolio/Component/Home.js";
 
 function App() {
     return (
     
       <>
-    <BrowserRouter>
+    <HashRouter >
   
       <Routes>
       <Route path="/" element={<Home />} />
       {/* <Route path="/Contact" element={<Contact/>} />
       <Route path="/AboutUs" element = {<AboutUs />} /> */}
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
     </>
    
 

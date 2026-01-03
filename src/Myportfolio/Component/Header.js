@@ -2,7 +2,7 @@ import React from "react";
 import "../css/nvbar.css";
 import "../css/style.css";
 import logo from "../Assets/logo1.png";
-import Navbar from "./Navbar";
+import Navbar from "./Navbar.js";
 
 const Header = () => {
   return (
