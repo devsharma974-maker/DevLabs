@@ -18,9 +18,7 @@ const Header = () => {
               <div className="col-lg-12">
                 <div className="header-elements">
                   <div className="site-logo">
-                    <a href="index.html">
                       <img src={logo} alt="" />
-                    </a>
                   </div>
                   <div className="btn-area d-lg-flex">
                     <Navbar />
