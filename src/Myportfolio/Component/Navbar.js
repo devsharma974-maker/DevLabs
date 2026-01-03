@@ -10,6 +10,22 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleNavClick = (e, id) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      setIsOpen(false);
+    } else {
+      // If the element isn't on the current page (for example when
+      // Pages serves README or a different page), navigate to the
+      // site root with the hash so GitHub Pages will load the app
+      // and land on the section.
+      const base = process.env.PUBLIC_URL || "/DevLabs";
+      window.location.href = `${base}/#${id}`;
+    }
+  };
+
   return (
     <>
       <button className="hamburger_menu" onClick={toggleMenu}>
@@ -23,16 +39,16 @@ const Navbar = () => {
         <img src={logo} alt="Logo" className="mb-4 SidbarLogo" />
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a href="#home" onClick={(e) => handleNavClick(e, "home")}>Home</a>
           </li>
           <li>
-            <a href="#about">About Us</a>
+            <a href="#about" onClick={(e) => handleNavClick(e, "about")}>About Us</a>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a href="#services" onClick={(e) => handleNavClick(e, "services")}>Services</a>
           </li>
           <li>
-            <a href="#skills">My Skills</a>
+            <a href="#skills" onClick={(e) => handleNavClick(e, "skills")}>My Skills</a>
           </li>
         </ul>
       </div>
